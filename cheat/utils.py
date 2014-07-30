@@ -48,9 +48,9 @@ def editor():
 def prompt_yes_or_no(question):
     """ Prompts the user with a yes-or-no question """
     print(question)
-    return raw_input('[y/n] ') == 'y'
+    return input('[y/n] ') == 'y'
 
 
 def warn(message):
     """ Prints a message to stderr """
-    print >> sys.stderr, (message)
+    sys.stderr.write(message + '\n')
